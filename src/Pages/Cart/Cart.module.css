@@ -1,0 +1,231 @@
+.container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .cart_container {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart_container h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .cart_container h3 {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .cart_container hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ecf0f1;
+  }
+  
+  .cart_items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart_item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    background: #fff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cart_item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart_item_image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #f8f9fa;
+    padding: 10px;
+  }
+  
+  .cart_item_details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .cart_item_title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .cart_item_description {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .cart_item_rating {
+    display: flex;
+    gap: 15px;
+    color: #f39c12;
+    font-size: 0.9rem;
+  }
+  
+  .cart_item_price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(9, 132, 209);
+    margin-top: 10px;
+  }
+  
+  .quantity_controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .quantity_button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .quantity_button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .quantity_display {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  .remove_button {
+    padding: 8px 16px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+  }
+  
+  .remove_button:hover {
+    background-color: #ff3742;
+  }
+  
+  .subtotal {
+    padding: 25px;
+    min-width: 320px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgb(193, 193, 193);
+    background-color: rgb(242, 241, 241);
+    border-radius: 8px;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .subtotal_summary {
+    text-align: center;
+  }
+  
+  .subtotal_summary p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .gift_option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkout_button {
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout_button:hover {
+    background-color: var(--primary-shade);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .subtotal {
+      min-width: auto;
+      position: static;
+    }
+    
+    .cart_item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .cart_item_image {
+      width: 100%;
+      height: 200px;
+    }
+    
+    .quantity_controls, .remove_button {
+      align-self: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .cart_container,
+    .subtotal {
+      padding: 15px;
+    }
+    
+    .cart_item {
+      padding: 15px;
+    }
+  }

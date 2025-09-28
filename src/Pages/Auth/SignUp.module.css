@@ -1,0 +1,109 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px;
+}
+
+.login__logo {
+    margin-bottom: 20px;
+}
+
+.login__logo img {
+    width: 100px;
+    object-fit: contain;
+}
+
+.login__container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login__container h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.login__field {
+    margin-bottom: 15px;
+}
+
+.login__field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.login__field input {
+    width: 100%;
+    height: 30px;
+    padding: 3px 7px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.login__field input:focus {
+    outline: none;
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}
+
+.login__signInButton {
+    width: 100%;
+    height: 30px;
+    background: #f0c14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 2px;
+    margin-top: 10px;
+    color: #111;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login__signInButton:hover {
+    background: #e7b63a;
+}
+
+.login__signInButton:active {
+    background: #d4a32c;
+}
+
+.login__agreement {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.login__createAccountButton {
+    width: 100%;
+    height: 30px;
+    background: #f1f1f1;
+    border: 1px solid;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-radius: 3px;
+    margin-top: 15px;
+    color: #111;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.login__createAccountButton:hover {
+    background: #e7e7e7;
+}
+
+.login__createAccountButton:active {
+    background: #dcdcdc;
+}
