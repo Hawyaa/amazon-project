@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import Routing from './Router.jsx';
-import { DataProvider, DataContext } from './Components/DataProvider/DataProvider';
+import { DataProvider, DataContext } from 'src\components\DataProvider\DataProvider.jsx';
 import { reducer, initialState } from './Utility/reducer';
 import { Type } from './Utility/action.type';
 import { auth } from './Utility/firebase';
