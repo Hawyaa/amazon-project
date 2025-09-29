@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../Components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../Api/endPoints";
-import ProductCard from "../../Components/Product/ProductCard";
-import Loader from "../../Components/Loader/Loader";
+import ProductCard from "../../components/Product/ProductCard";
+import Loader from "../../components/Loader/Loader";
 import classes from "./Results.module.css";
 
 function Results() {
