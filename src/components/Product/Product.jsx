@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ProductCard from './ProductCard'
-import Loader from '../Loader/Loader' // Import Loader component
-import classes from './Product.module.css'
+import Loader from '../Loader/Loader'
+import styles from './Product.module.css' // ✅ CSS module import
 
 function Product() {
     const [products, setProducts] = useState([])
@@ -28,15 +28,15 @@ function Product() {
     }
 
     if (error) {
-        return <div className={classes.error}>{error}</div>
+        return <div className={styles.error}>{error}</div>
     }
 
     if (products.length === 0) {
-        return <div className={classes.empty}>No products found</div>
+        return <div className={styles.empty}>No products found</div>
     }
 
     return (
-        <section className={classes.products_container}>
+        <section className={styles.products_container}>
             {products.slice(0, 20).map((singleProduct) => (
                 <ProductCard product={singleProduct} key={singleProduct.id} />
             ))}
