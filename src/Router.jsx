@@ -9,7 +9,7 @@ import Orders from "./Pages/Orders/Orders";
 import Cart from "./Pages/Cart/Cart";
 import Results from "./Pages/Results/Results";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
-import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 const stripePromise = loadStripe(
   "pk_test_51SBA7SAHOFIFWillXqSrfO5JOto9cNGYrQug6MclVqS4ll3FgaJGUUbAFlwSwADEXPKFSjZkq9Fc5l8NBAxXUu8r00oVOUwco0"
