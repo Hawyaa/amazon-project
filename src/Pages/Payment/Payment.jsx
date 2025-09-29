@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import classes from "./Payment.module.css";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout.jsx";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import ProductCard from "../../components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";

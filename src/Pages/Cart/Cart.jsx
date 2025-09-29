@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout.jsx";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import CurrencyFormat from "../../components/CurrencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
