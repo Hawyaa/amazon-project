@@ -1,177 +1,161 @@
-.payment {
-    max-width: 1200px;
-    margin: 0 auto;
+/* src/Pages/Payment/Payment.module.css */
+.payment__header {
     padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 24px;
+    background-color: rgb(234, 237, 237);
 }
 
-.payment__header {
-    background: #232f3e;
-    color: white;
-    padding: 15px 20px;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-radius: 4px;
+.payment {
+    padding: 30px;
 }
 
 .flex {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
     margin: 20px 0;
-    padding: 15px;
-    background: #f9f9f9;
-    border-radius: 4px;
+    border-bottom: 1px solid lightgray;
 }
 
 .flex h3 {
-    color: #232f3e;
-    margin: 0;
-    font-size: 18px;
-    min-width: 200px;
+    min-width: 300px;
 }
 
-.flex div {
-    flex: 1;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background: #ddd;
-    margin: 20px 0;
-}
-
-.payment__card {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background: white;
-}
-
-.cardError {
-    color: #d00;
-    font-size: 14px;
-    margin-top: 10px;
-    padding: 5px;
-    background: #ffe6e6;
-    border-radius: 3px;
-}
-
-.payment__total {
-    display: flex;
-    justify-content: space-between;
+/* Make product cards display horizontally */
+.flex .productCard {
+    display: flex !important;
     align-items: center;
-    padding: 20px;
-    background: #f0f2f2;
-    border-radius: 4px;
-    margin-top: 20px;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    transform: none !important;
+    margin: 5px 0;
 }
 
-.payment__total h3 {
-    color: #232f3e;
-    margin: 0;
-    font-size: 20px;
+.flex .productCard img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.payment__button {
-    background: #f0c14b;
-    border: 1px solid;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-    padding: 10px 30px;
-    border-radius: 3px;
-    font-size: 16px;
-    cursor: pointer;
+.flex .productCard .product__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0 !important;
+}
+
+.flex .productCard .product__details h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-.payment__button:hover {
-    background: #e7b42e;
+.flex .productCard .product__details p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #666;
 }
 
-.payment__button:disabled {
-    background: #dddddd;
-    cursor: not-allowed;
-    border-color: #cccccc;
+.flex .productCard .product__details .product__price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #B12704;
+    margin: 5px 0;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .payment__total {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .payment {
-        padding: 10px;
-    }
+/* Rating display */
+.flex .productCard .product__rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
 }
+
+.flex .productCard .product__rating span {
+    font-size: 12px;
+    color: #007185;
+}
+
+/* Hide add to cart button in payment page */
+.flex .productCard .product__button,
+.flex .productCard button,
+.flex .productCard [class*="button"],
+.flex .productCard .addToCart,
+.flex .productCard .add__to__cart {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Remove any button-like elements */
+.flex .productCard .product__details button {
+    display: none !important;
+}
+
 .payment__card__container {
-    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    background-color: white;
 }
 
 .payment__details {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    margin-top: 15px;
 }
 
 .payment__price {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.payment__price span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #232f3e;
 }
 
 .payment__button {
     background: #f0c14b;
+    border-radius: 4px;
+    padding: 10px 20px;
     border: 1px solid;
+    font-weight: bold;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
-    padding: 10px 20px;
-    border-radius: 3px;
-    font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-.payment__button:hover:not(:disabled) {
-    background: #e7b42e;
+    font-size: 16px;
 }
 
 .payment__button:disabled {
-    background: #dddddd;
+    background-color: lightgray;
     cursor: not-allowed;
-    border-color: #cccccc;
+}
+
+.cardError {
+    color: red;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    border-radius: 4px;
 }
 
 .success {
-    color: #0f5132;
-    background-color: #d1e7dd;
-    border: 1px solid #badbcc;
-    padding: 15px;
-    border-radius: 4px;
+    color: green;
     margin-top: 20px;
+    padding: 15px;
+    background-color: #e6ffe6;
+    border: 1px solid green;
+    border-radius: 4px;
     text-align: center;
     font-weight: bold;
+}
+
+/* Remove hover effects */
+.flex .productCard:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }

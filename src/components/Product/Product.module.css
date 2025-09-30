@@ -16,6 +16,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .productCard:hover {
@@ -63,6 +64,7 @@
     gap: 5px;
 }
 
+/* Add to Cart Button - Hidden by default, visible on hover */
 .addToCartButton {
     background-color: var(--primary-color);
     color: white;
@@ -71,8 +73,17 @@
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-top: auto; /* Pushes button to bottom */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+}
+
+.productCard:hover .addToCartButton {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .addToCartButton:hover {
